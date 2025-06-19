@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
                 input[0] in listOf('&', '#', '<') -> "Это спец символ!"
                 else -> "Непредусмотренный вариант!"
             }
-
+            charResult.text = message
         }
-        charResult.text = "TEST"
+
     }
 }

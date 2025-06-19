@@ -10,6 +10,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val charInput = findViewById<EditText>(R.id.charInput)
+        val charResult = findViewById<TextView>(R.id.charResult)
+        val checkCharBtn = findViewById<Button>(R.id.checkCharBtn)
+
+        checkCharBtn.setOnClickListener {
+            charResult.text = "TEST"
+        }
 
     }
 }

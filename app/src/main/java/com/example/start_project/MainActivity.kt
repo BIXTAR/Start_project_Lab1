@@ -14,8 +14,15 @@ class MainActivity : AppCompatActivity() {
         val checkCharBtn = findViewById<Button>(R.id.checkCharBtn)
 
         checkCharBtn.setOnClickListener {
-            charResult.text = "TEST"
-        }
+            val input = charInput.text.toString()
+            val message = when {
+                input.length != 1 -> "Введите один символ"
+                input[0].isDigit() -> "Это цифра!"
+                input[0] in listOf('&', '#', '<') -> "Это спец символ!"
+                else -> "Непредусмотренный вариант!"
+            }
 
+        }
+        charResult.text = "TEST"
     }
 }
